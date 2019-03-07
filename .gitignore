@@ -3,6 +3,7 @@
 *.a
 *.o
 *.so
+*.pyd
 __pycache__
 
 # Ignore .c files by default to avoid including generated code. If you want to
@@ -10,28 +11,19 @@ __pycache__
 *.c
 
 # Other generated files
-*/version.py
-*/cython_version.py
-htmlcov
-.coverage
 MANIFEST
-.ipynb_checkpoints
+astropy/version.py
+astropy/cython_version.py
+astropy/wcs/include/wcsconfig.h
+astropy/_erfa/core.py
 
 # Sphinx
+_build
+_generated
 docs/api
-docs/_build
-
-# Eclipse editor project files
-.project
-.pydevproject
-.settings
-
-# Pycharm editor project files
-.idea
-
-# Floobits project files
-.floo
-.flooignore
+docs/generated
+docs/visualization/ngc6976.jpeg
+docs/visualization/ngc6976-default.jpeg
 
 # Packages/installer info
 *.egg
@@ -39,6 +31,7 @@ docs/_build
 dist
 build
 eggs
+.eggs
 parts
 bin
 var
@@ -46,15 +39,31 @@ sdist
 develop-eggs
 .installed.cfg
 distribute-*.tar.gz
+.venv
+venv
 
 # Other
 .cache
 .tox
-.*.sw[op]
+.*.swp
+.*.swo
 *~
 .project
 .pydevproject
 .settings
+.coverage
+cover
+htmlcov
 
 # Mac OSX
 .DS_Store
+
+# PyCharm
+.idea
+
+# Pytest
+v
+.pytest_cache
+
+# VSCode
+.vscode
